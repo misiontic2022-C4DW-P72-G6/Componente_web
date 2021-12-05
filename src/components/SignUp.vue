@@ -8,21 +8,23 @@
         <input type="text" v-model="user.username" placeholder="Usuario" />
         <br />
         
-        <input
-          type="password"
-          v-model="user.password"
-          placeholder="Contraseña"
-        />
-        <input type="text" v-model="user.name" placeholder="Nombre" />
+        <input type="password" v-model="user.password" placeholder="Contraseña"/>
         <br />
-        <input type="email" v-model="user.email" placeholder="Correo" />
+        <input type="text" v-model="user.Nombres" placeholder="Nombres" />
         <br />
-        <input
-          type="number"
-          v-model="user.balance"
-          placeholder="Saldo Inicial"
-        />
+        <input type="text" v-model="user.Apellidos" placeholder="Apellidos" />
         <br />
+         <input type="number" v-model="user.No_documento" placeholder="No_documento" />
+        <br />
+        <input type="text" v-model="user.Direccion" placeholder="Dirección" />
+        <br />
+        <input type="number" v-model="user.Telefono" placeholder="Télefono" />
+        <br />
+         <input type="text" v-model="user.Correo" placeholder="Correo" />
+        <br />
+        <input type="text" v-model="user.Ciudad" placeholder="Ciudad" />
+        <br />
+        
         <button type="submit">Registrarse</button>
       </form>
     </div>
@@ -30,19 +32,19 @@
 </template>
 
 <script>
-
 import gql from "graphql-tag";
-
 export default {
   name: "SignUp",
   data: function () {
     return {
       user: {
-        username: "",
-        password: "",
-        name: "",
-        email: "",
-        balance: 0,
+        Nombres: "",
+        Apellidos: "",
+        No_documento: 0,
+        Direccion: "",
+        Telefono: 0,
+        Correo: "",
+        Ciudad: "Bogota",
       },
     };
   },
@@ -76,7 +78,6 @@ export default {
     },
   },
 };
-
 </script>
 
 <style>
