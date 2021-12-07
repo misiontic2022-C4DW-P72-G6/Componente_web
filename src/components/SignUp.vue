@@ -2,28 +2,56 @@
 
   <div class="signUp_user">
     <div class="container_signUp_user">
+      
       <h2>Registrarse</h2>
 
       <form v-on:submit.prevent="processSignUp">
+        <div class="form-group">
+        <label>username:</label>
         <input type="text" v-model="user.username" placeholder="Usuario" />
+        </div>
         <br />
-        
+        <div class="form-group">
+        <label>password:</label>
         <input type="password" v-model="user.password" placeholder="Contraseña"/>
-        <br />
+        </div>
+        <br /> <br />
+        <div class="form-group">
+        <label>Nombres:</label>
         <input type="text" v-model="user.Nombres" placeholder="Nombres" />
-        <br />
+        </div>
+        <br /> <br />
+        <div class="form-group">
+        <label>Apellidos:</label>
         <input type="text" v-model="user.Apellidos" placeholder="Apellidos" />
-        <br />
+        </div>
+    
+        <br /> <br />
+        <div class="form-group">
+        <label>No_documento:</label>
          <input type="number" v-model="user.No_documento" placeholder="No_documento" />
-        <br />
+         </div>
+        <br /> <br />
+        <div class="form-group">
+        <label>Direccion:</label>
         <input type="text" v-model="user.Direccion" placeholder="Dirección" />
-        <br />
+        </div>
+        <br /> <br />
+        <div class="form-group">
+        <label>Telefono:</label>
         <input type="number" v-model="user.Telefono" placeholder="Télefono" />
-        <br />
+        </div>
+        <br /> <br />
+        <div class="form-group">
+        <label>Correo:</label>
          <input type="text" v-model="user.Correo" placeholder="Correo" />
-        <br />
+         </div>
+        <br /><br />
+        <div class="form-group">
+         <label>Ciudad:</label>
         <input type="text" v-model="user.Ciudad" placeholder="Ciudad" />
-        <br />
+        </div>
+        <br /><br /> 
         
         <button type="submit">Registrarse</button>
       </form>
@@ -81,6 +109,19 @@ export default {
 </script>
 
 <style>
+form {
+  padding: 20px 15%;
+}
+.form-group label {
+  width: 35%;
+  text-align: center;
+  font-size: 15px;
+}
+label {
+  display: inline-block;
+  width: 80px;
+
+}
 .signUp_user {
   margin: 0;
   padding: 0%;
@@ -93,8 +134,8 @@ export default {
 .container_signUp_user {
   border: 3px solid #283747;
   border-radius: 10px;
-  width: 25%;
-  height: 60%;
+  width: 75%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -106,23 +147,24 @@ export default {
 .signUp_user form {
   width: 70%;
 }
+
+
 .signUp_user input {
-  height: 40px;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px 20px;
-  margin: 5px 0;
-  border: 1px solid #283747;
+  padding: 10px;
+  background-color: rgba(0, 255, 255, 0.075);
+  width: 45%;
+  margin-right: 100px;
+  border-radius: 15px;
 }
 .signUp_user button {
-  width: 100%;
-  height: 40px;
-  color: #e5e7e9;
-  background: #ac0181;
-  border: 1px solid #e5e7e9;
-  border-radius: 5px;
-  padding: 10px 25px;
-  margin: 5px 0 25px 0;
+  color: rgb(143, 13, 13);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+  font-size: 20px;
+  box-shadow: 2px 2px 2px 1px rgba(197, 23, 23, 0.2);
+  border-radius: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 .signUp_user button:hover {
   color: #e5e7e9;

@@ -99,7 +99,7 @@ export default {
   width: 100%;
   height: 40px;
   color: #e5e7e9;
-  background: #ac0181;
+  background: #864c78;
   border: 1px solid #e5e7e9;
   border-radius: 5px;
   padding: 10px 25px;
@@ -108,6 +108,6 @@ export default {
 .logIn_user button:hover {
   color: #e5e7e9;
   background: rgb(146, 144, 0);
-  border: 1px solid #ac0181;
+  border: 1px solid #864c78
 }
 </style>
