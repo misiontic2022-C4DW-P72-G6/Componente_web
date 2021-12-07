@@ -6,9 +6,10 @@
         <button v-if="is_auth" v-on:click="loadHome">Inicio</button>
         <button v-if="is_auth" v-on:click="loadAccount">Cuenta</button>
         <button v-if="is_auth" v-on:click="logOut">Cerrar Sesión</button>
+        
         <button v-if="!is_auth" v-on:click="loadLogIn">Iniciar </button>
         <button v-if="!is_auth" v-on:click="loadSignUp">Registrarse</button>
-        <button v-if="!is_auth" v-on:click="loadcatalogo">Ver Catalogo</button>
+        <button v-if="is_auth" v-on:click="loadcatalogo">Ver Catalogo</button>
       </nav>
     </div>
 
@@ -68,9 +69,6 @@ export default {
       localStorage.clear();
       alert("Sesión Cerrada");
       this.verifyAuth();
-    },
-    loadAccount: function () {
-      this.$router.push({ name: "account" });
     },
     loadcatalogo: function () {
       this.$router.push({ name: "catalogo" });

@@ -6,14 +6,14 @@
       >!
     </h1>
     <div class="details">
-      <h3>Su información es la siguiente</h3>
+      <h3>Gracias por confiar en nosotros...</h3>
       <h2>
-        Nombre de usuario:
-        <span>{{ userDetailById.username }}</span>
+        Hola!
+        <span>{{userDetailById.Nombres }}</span>
       </h2>
       <h2>
         Correo electrónico:
-        <span>{{ userDetailById.email }}</span>
+        <span>{{userDetailById.Correo }}</span>
       </h2>
     </div>
   </div>
@@ -28,9 +28,9 @@ export default {
     return {
       userId: jwt_decode(localStorage.getItem("token_refresh")).user_id,
       userDetailById: {
-        username: "",
-        name: "",
-        email: "",
+        Nombres: "",
+        Correo: "",
+        
       },
     };
   },
@@ -39,9 +39,9 @@ export default {
       query: gql`
         query ($userId: Int!) {
           userDetailById(userId: $userId) {
-            username
-            name
-            email
+            Nombres
+            Correo
+            
           }
         }
       `,

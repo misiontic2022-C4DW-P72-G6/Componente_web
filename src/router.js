@@ -3,7 +3,6 @@ import App from './App.vue';
 import LogIn from './components/LogIn.vue'
 import SignUp from './components/SignUp.vue'
 import Home from './components/Home.vue'
-import Account from './components/Account.vue'
 import catalogo from './components/catalogo.vue'
 
 
@@ -26,12 +25,6 @@ const routes = [{
     path: '/user/home',
     name: "home",
     component: Home
-},
-
-{
-    path: '/user/account',
-    name: "account",
-    component: Account
 },
 
 {
