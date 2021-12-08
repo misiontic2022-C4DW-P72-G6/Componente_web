@@ -3,12 +3,18 @@
     <div class="header">
       <h1>Hoteles</h1>
       <nav>
+
+        <button v-if="is_auth" v-on:click="loadLogIn">Iniciar </button>
+        <button v-if="is_auth" v-on:click="loadSignUp">SignUp</button>
+
         <button v-if="is_auth" v-on:click="loadHome">Inicio</button>
-        <button v-if="is_auth" v-on:click="loadAccount">Cuenta</button>
-        <button v-if="is_auth" v-on:click="logOut">Cerrar Sesión</button>
-        <button v-if="!is_auth" v-on:click="loadLogIn">Iniciar </button>
-        <button v-if="!is_auth" v-on:click="loadSignUp">Registrarse</button>
-        <button v-if="!is_auth" v-on:click="loadcatalogo">Ver Catalogo</button>
+        <button v-if="is_auth" v-on:click="loadcatalogo">Catalogo</button>
+        <button v-if="is_auth" v-on:click="loadAccount">Reserva</button>
+        <br />
+        <button v-if="is_auth" v-on:click="logOut">LogOut</button>
+        
+        
+       
       </nav>
     </div>
 
@@ -22,7 +28,7 @@
       </router-view>
     </div>
     <div class="footer">
-      <h2>Hoteleria</h2>
+      <h3>Confort y la mejor atención.</h3>
     </div>
   </div>
 </template>
@@ -60,7 +66,6 @@ export default {
       alert("Registro Exitoso");
       this.completedLogIn(data);
     },
-
     loadHome: function () {
       this.$router.push({ name: "home" });
     },
@@ -68,9 +73,6 @@ export default {
       localStorage.clear();
       alert("Sesión Cerrada");
       this.verifyAuth();
-    },
-    loadAccount: function () {
-      this.$router.push({ name: "account" });
     },
     loadcatalogo: function () {
       this.$router.push({ name: "catalogo" });
@@ -89,10 +91,10 @@ body {
 .header {
   margin: 0%;
   padding: 0;
-  width: 100%;
+  width: 99%;
   height: 10vh;
   min-height: 100px;
-  background-color: #eea300;
+  background-color: #b89a39;;
   color: #e5e7e9;
   display: flex;
   justify-content: space-between;
@@ -112,13 +114,13 @@ body {
 }
 .header nav button {
   color: #e5e7e9;
-  background: #ac0181;
+  background: #5a4b1ccb;
   border: 1px solid #e5e7e9;
-  border-radius: 5px;
-  padding: 10px 20px;
+  border-radius: 50px;
+  padding: 10px ;
 }
 .header nav button:hover {
-  color: #ac0181;
+  color: #744b6998;
   background: #e5e7e9;
   border: 1px solid #e5e7e9;
 }
@@ -132,16 +134,16 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 10vh;
-  min-height: 100px;
-  background-color: #ac0181;
+  height: 2vh;
+  min-height: 50px;
+  background-color: #b89a39e7;
   color: #e5e7e9;
 }
 .footer h2 {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: right;
+  align-items: right; 
 }
 </style>

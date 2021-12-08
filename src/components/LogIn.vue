@@ -95,6 +95,7 @@ export default {
   margin: 5px 0;
   border: 1px solid #283747;
 }
+
 .logIn_user button {
   width: 100%;
   height: 40px;
