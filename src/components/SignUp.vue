@@ -10,48 +10,48 @@
         <label>username:</label>
         <input type="text" v-model="user.username" placeholder="Usuario" />
         </div>
-        <br />
+        <br /> 
         <div class="form-group">
         <label>password:</label>
         <input type="password" v-model="user.password" placeholder="Contraseña"/>
         </div>
-        <br /> <br />
+        <br /> 
         <div class="form-group">
         <label>Nombres:</label>
         <input type="text" v-model="user.Nombres" placeholder="Nombres" />
         </div>
-        <br /> <br />
+        <br /> 
         <div class="form-group">
         <label>Apellidos:</label>
         <input type="text" v-model="user.Apellidos" placeholder="Apellidos" />
         </div>
     
-        <br /> <br />
+        <br /> 
         <div class="form-group">
         <label>No_documento:</label>
          <input type="number" v-model="user.No_documento" placeholder="No_documento" />
          </div>
-        <br /> <br />
+        <br /> 
         <div class="form-group">
         <label>Direccion:</label>
         <input type="text" v-model="user.Direccion" placeholder="Dirección" />
         </div>
-        <br /> <br />
+        <br /> 
         <div class="form-group">
         <label>Telefono:</label>
         <input type="number" v-model="user.Telefono" placeholder="Télefono" />
         </div>
-        <br /> <br />
+        <br /> 
         <div class="form-group">
         <label>Correo:</label>
          <input type="text" v-model="user.Correo" placeholder="Correo" />
          </div>
-        <br /><br />
+        <br />
         <div class="form-group">
          <label>Ciudad:</label>
         <input type="text" v-model="user.Ciudad" placeholder="Ciudad" />
         </div>
-        <br /><br /> 
+        <br />
         
         <button type="submit">Registrarse</button>
       </form>
@@ -115,7 +115,7 @@ form {
 .form-group label {
   width: 35%;
   text-align: center;
-  font-size: 15px;
+  font-size: 17px;
 }
 label {
   display: inline-block;
@@ -133,8 +133,8 @@ label {
 }
 .container_signUp_user {
   border: 3px solid #283747;
-  border-radius: 10px;
-  width: 75%;
+  border-radius: 20px;
+  width: 48%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -165,10 +165,14 @@ label {
   border-radius: 50px;
   margin-left: 50px;
   margin-right: 50px;
+  width: 85%;
+  height: 80%;
+  
 }
 .signUp_user button:hover {
   color: #e5e7e9;
   background: crimson;
   border: 1px solid #283747;
+  
 }
 </style>
