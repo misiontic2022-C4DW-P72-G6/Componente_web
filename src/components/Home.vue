@@ -60,13 +60,14 @@ export default {
   margin: 0;
   padding: 0%;
   width: 100%;
-  height: 100%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .information h1 {
+  height: 5%;
   font-size: 60px;
   color: #283747;
 }
@@ -90,7 +91,7 @@ export default {
 .details {
   border: 3px solid rgba(0, 0, 0, 0.3);
   border-radius: 20px;
-  padding: 30px 80px;
-  margin: 30px 0 0 0;
+  padding: 30px 4px;
+  margin: 10px 0 0 0;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="information">
+  <div class="information1">
       
     <div class="create-route">
       <h1>Nuestros Hoteles Asociados</h1>
@@ -199,7 +199,7 @@ export default {
   padding: 0px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.information {
+.information1 {
   margin: 0;
   padding: 0%;
   width: 90%;
@@ -209,15 +209,15 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.information h1 {
+.information1 h1 {
   font-size: 60px;
   color: #283747;
 }
-.information h2 {
+.information1 h2 {
   font-size: 40px;
   color: #283747;
 }
-.information span {
+.information1 span {
   color: crimson;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
