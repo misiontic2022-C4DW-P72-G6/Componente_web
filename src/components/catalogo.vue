@@ -1,5 +1,5 @@
 <template>
-  <div class="information">
+  <div class="information1">
       
     <div class="create-route">
       <h1>Nuestros Hoteles Asociados</h1>
@@ -42,78 +42,7 @@
         </nav>
       </div>
         
-      <div class="cuadro_contenedor">
-        <div class="create-route">
-          Nombre:
-        <span>{{ catalogoDetailById.Nombre }}</span>
-        </div>
-        <br />
-
-        <div class="create-route">
-          Ubicación:
-        <span>{{ catalogoDetailById.Ubicacion }}</span>
-        </div>
-        <br />
-
-        <div class="create-route">
-          Calificación:
-        <span>{{ catalogoDetailById.Calificacion }}</span>
-        </div>
-        <br />
-
-        <div class="create-route">
-          Descripción:
-          <span>{{ catalogoDetailById.Descripcion }}</span>
-        </div>
-        <br />
-
-        <div class="create-route">
-          Correo:
-        <span>{{ catalogoDetailById.Correo }}</span>
-        </div>
-        <br />
-
-        <nav>
-        <button v-if="!is_auth" v-on:click="reservas">Reservar</button>
-        </nav>
-      </div>
-
-      <div class="cuadro_contenedor">
-        <div class="create-route">
-          Nombre:
-        <span>{{ catalogoDetailById.Nombre }}</span>
-        </div>
-        <br />
-
-        <div class="create-route">
-          Ubicación:
-        <span>{{ catalogoDetailById.Ubicacion }}</span>
-        </div>
-        <br />
-
-        <div class="create-route">
-          Calificación:
-        <span>{{ catalogoDetailById.Calificacion }}</span>
-        </div>
-        <br />
-
-        <div class="create-route">
-          Descripción:
-        <span>{{ catalogoDetailById.Descripcion }}</span>
-        </div>
-        <br />
-
-        <div class="create-route">
-          Correo:
-        <span>{{ catalogoDetailById.Correo }}</span>
-        </div>
-        <br />
-
-        <nav>
-        <button v-if="!is_auth" v-on:click="reservas">Reservar</button>
-        </nav>
-        <br>
-      </div>
+      
         
   </div>
   
@@ -127,30 +56,19 @@ export default {
   name: "catalogo",
   data: function () {
     return {
-      catalogoId: jwt_decode(localStorage.getItem("token_refresh")).catalogo_id, 
-      
-      catalogoDetailById: {
-        Nombre: "",
-        Correo: "",
-      }
-      /*catalogoId: 1,
+     /* catalogoId: jwt_decode(localStorage.getItem("token_refresh")).catalogo_id, */
+      catalogoId: localStorage.getItem("catalogoId") ,
       catalogoDetailById: {
         Nombre: "",
         Ubicacion: "",
         Calificacion: 0,
         Direccion: "",
         Descripcion: "",
-        Correo: "",
-        catalogoId: 2,
-        catalogoDetailById: {
-          Nombre: "",
-          Ubicacion: "",
-          Calificacion: 0,
-          Direccion: "",
-          Descripcion: "",
-          Correo: "",
-        },
-      },*/
+        Correo: "",    
+
+
+      }
+
     };
   },
   apollo: {
@@ -197,7 +115,7 @@ export default {
   padding: 0px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.information {
+.information1 {
   margin: 0;
   padding: 0%;
   width: 90%;
@@ -207,15 +125,15 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.information h1 {
+.information1 h1 {
   font-size: 60px;
   color: #283747;
 }
-.information h2 {
+.information1 h2 {
   font-size: 40px;
   color: #283747;
 }
-.information span {
+.information1 span {
   color: crimson;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

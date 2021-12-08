@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="app">
     <div class="header">
+      
       <h1>Hoteles</h1>
       <nav>
 
         <button v-if="is_auth" v-on:click="loadLogIn">Iniciar </button>
-        <button v-if="is_auth" v-on:click="loadSignUp">SignUp</button>
-
+        
         <button v-if="is_auth" v-on:click="loadHome">Inicio</button>
         <button v-if="is_auth" v-on:click="loadcatalogo">Catalogo</button>
         <button v-if="is_auth" v-on:click="loadAccount">Reserva</button>
-        <br />
+        <button v-if="!is_auth" v-on:click="loadSignUp">SignUp</button>
         <button v-if="is_auth" v-on:click="logOut">LogOut</button>
         
         
@@ -91,7 +91,7 @@ body {
 .header {
   margin: 0%;
   padding: 0;
-  width: 99%;
+  width: 100%;
   height: 10vh;
   min-height: 100px;
   background-color: #b89a39;;

@@ -1,5 +1,30 @@
 <template>
+
+ <div class="">
+     <v-container grid-list-md>
+         <v-layout row wrap>
+             <v-flex xs0 xl6 lg6 md6 sm6>
+                    <v-img src="/imagenes/hot1" ></v-img>
+                    <li><a href="./imagenes/hot2.jpeg"></a></li>
+                    <img src="/imagenes/hot2" >
+                    <img src="/imagenes/hot3" >
+                    <img src="/imagenes/hot4" >
+                    </v-flex>
+               <v-flex xs0 xl6 lg6 md6 sm6>
+
+                 
+               </v-flex>
+         </v-layout>
+
+     </v-container>
+
+ </div>
+
+
   <div class="logIn_user">
+
+    
+
     <div class="container_logIn_user">
       <h2>Iniciar sesión</h2>
       <form v-on:submit.prevent="processLogInUser">
@@ -12,9 +37,14 @@
         />
         <br />
         <button type="submit">Iniciar Sesión</button>
+       
+
       </form>
+      
     </div>
+      
   </div>
+
 </template>
 
 <script>
@@ -97,18 +127,25 @@ export default {
 }
 
 .logIn_user button {
-  width: 100%;
+  width: 60%;
   height: 40px;
   color: #e5e7e9;
-  background: #ac0181;
+  background: #0e18a3;
   border: 1px solid #e5e7e9;
-  border-radius: 5px;
+  border-radius: 50px;
   padding: 10px 25px;
   margin: 5px 0;
+  justify-content: center;
+  align-items: center;
+ 
 }
 .logIn_user button:hover {
   color: #e5e7e9;
   background: rgb(146, 144, 0);
   border: 1px solid #ac0181;
+  justify-content: center;
+  align-items: center;
+  
 }
+
 </style>
